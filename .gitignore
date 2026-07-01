@@ -1,0 +1,8 @@
+# OS
+.DS_Store
+
+# Local editor / preview tooling
+.claude/
+
+# Design reference material (third-party screenshots, not part of the mockup)
+assets/reference site screenshots/
