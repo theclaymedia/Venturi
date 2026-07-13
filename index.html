@@ -8,7 +8,7 @@
 <link rel="icon" href="assets/venturi/fav.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,500&display=swap" rel="stylesheet" />
 <style>
   :root{
     --black:#0a0a0a;
@@ -23,7 +23,7 @@
     --teal-strong:#15788a;
     --teal-light:#4bbccf;
     --banner:#c7e7ec;
-    --serif:"Playfair Display",Georgia,serif;
+    --serif:"Inter",system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif; /* headline font — now bold sans (Enphase-style) */
     --sans:"Inter",system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
     --wrap:1440px;
     --pad:clamp(20px,5vw,64px);
@@ -43,12 +43,12 @@
   .wrap{max-width:var(--wrap);margin:0 auto;padding-left:var(--pad);padding-right:var(--pad)}
 
   /* ---------- Typography helpers ---------- */
-  .display{font-family:var(--serif);font-weight:400;line-height:1.02;letter-spacing:-.5px}
+  .display{font-family:var(--serif);font-weight:800;line-height:1.04;letter-spacing:-1.2px}
   .eyebrow{font-size:11px;letter-spacing:.16em;text-transform:uppercase;font-weight:600;color:var(--muted)}
   .btn{
     display:inline-flex;align-items:center;justify-content:center;gap:10px;
     font-size:12px;letter-spacing:.14em;text-transform:uppercase;font-weight:600;
-    padding:15px 34px;border-radius:2px;border:1px solid rgba(255,255,255,.55);
+    padding:16px 34px;border-radius:999px;border:1px solid rgba(255,255,255,.55);
     color:#fff;background:transparent;cursor:pointer;transition:.25s ease;white-space:nowrap;
   }
   .btn:hover{background:rgba(255,255,255,.12)}
@@ -83,7 +83,7 @@
   .nav-right{display:flex;align-items:center;gap:22px}
   .nav-cta{
     background:var(--teal);color:#fff;font-size:12px;letter-spacing:.12em;text-transform:uppercase;
-    font-weight:700;padding:13px 26px;border-radius:2px;transition:.25s;
+    font-weight:700;padding:13px 28px;border-radius:999px;transition:.25s;
   }
   .nav-cta:hover{background:var(--teal-strong)}
   .icon-btn{width:22px;height:22px;color:#fff;opacity:.9}
@@ -173,6 +173,22 @@
   .tile p{color:#a9adb3;font-weight:300;font-size:14.5px;margin-bottom:22px;flex:1}
   .tile .arrow-link{color:#fff;font-size:11px}
 
+  /* ---------- Data Centers ---------- */
+  .datacenter{position:relative;background:#070b0e;padding:clamp(80px,10vw,130px) 0;overflow:hidden}
+  .datacenter::before{content:"";position:absolute;inset:0;background:radial-gradient(80% 60% at 50% 0%, rgba(28,147,168,.20), transparent 60%);pointer-events:none}
+  .datacenter .wrap{position:relative}
+  .dc-head{max-width:740px;margin:0 auto clamp(40px,5vw,58px);text-align:center}
+  .dc-head .eyebrow{color:var(--teal-light);margin-bottom:16px}
+  .dc-head h2{font-size:clamp(30px,4.4vw,54px);line-height:1.06;margin-bottom:20px}
+  .dc-head p{color:#b7c0c4;font-weight:300;font-size:clamp(16px,1.4vw,19px)}
+  .dc-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(16px,1.8vw,22px);margin-bottom:clamp(36px,4vw,48px)}
+  .dc-card{background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.1);border-radius:16px;padding:30px 26px}
+  .dc-card .num{font-weight:800;font-size:clamp(25px,2.5vw,33px);color:var(--teal-light);letter-spacing:-.5px;margin-bottom:12px}
+  .dc-card h3{font-size:17px;font-weight:600;margin-bottom:10px}
+  .dc-card p{color:#9aa4a8;font-weight:300;font-size:14px;line-height:1.5}
+  .dc-foot{display:flex;flex-direction:column;align-items:center;gap:24px;text-align:center}
+  .dc-foot .use{color:#8b9498;font-size:14.5px;font-weight:300;max-width:700px;line-height:1.6}
+
   /* ---------- Light statement / feature ---------- */
   .statement{background:var(--paper);color:#111;padding:clamp(80px,10vw,130px) 0}
   .statement .grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(36px,6vw,90px);align-items:center}
@@ -194,7 +210,7 @@
   .farmband p{color:#b0b4b0;font-weight:300;font-size:16px;margin-bottom:26px;max-width:460px}
 
   /* ---------- Cards duo ---------- */
-  .duo{background:var(--black);padding:0 0 clamp(70px,8vw,110px)}
+  .duo{background:var(--black);padding:clamp(70px,8vw,110px) 0}
   .duo-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,3vw,40px)}
   .card .thumb{aspect-ratio:16/10;border-radius:2px;overflow:hidden;position:relative}
   .card .thumb img{width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
@@ -218,7 +234,7 @@
   .story .thumb .ph{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.4);font-size:11px;letter-spacing:.2em;text-transform:uppercase}
   .story .date{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--teal-light);margin:22px 0 12px}
   .story h4{font-size:20px;font-weight:400;line-height:1.3;margin-bottom:18px;font-family:var(--serif)}
-  .chip{display:inline-block;font-size:11px;letter-spacing:.1em;text-transform:uppercase;border:1px solid var(--line);padding:6px 14px;border-radius:2px;color:#cfcfcf}
+  .chip{display:inline-block;font-size:11px;letter-spacing:.1em;text-transform:uppercase;border:1px solid var(--line);padding:6px 14px;border-radius:999px;color:#cfcfcf}
 
   /* ---------- Newsletter ---------- */
   .news{background:var(--paper);color:#111;padding:clamp(70px,9vw,120px) 0}
@@ -263,6 +279,7 @@
     .feature{grid-template-columns:1fr}
     .feature .media{order:-1;aspect-ratio:4/3}
     .tiles{grid-template-columns:1fr}
+    .dc-grid{grid-template-columns:1fr 1fr}
     .statement .grid{grid-template-columns:1fr;gap:30px}
     .statement .media{order:-1;aspect-ratio:16/10}
     .farmband .inner{grid-template-columns:1fr}
@@ -279,7 +296,16 @@
     .hero-stats{gap:14px}
     .stat{border-right:0;padding-right:0;margin-right:0;min-width:45%}
     .hero{padding-bottom:40px}
+    .dc-grid{grid-template-columns:1fr}
   }
+
+  /* ---------- Enphase-style pass: bold sans headings, softer cards ---------- */
+  .hero h1,.platform h2,.statement h2,.stories-head h2,.news h2,.dc-head h2{font-weight:800;letter-spacing:-1px}
+  .farmband h2,.story h4,.stat .v,.tile h3{font-weight:700}
+  .tile{border-radius:16px}
+  .card .thumb{border-radius:14px}
+  .farmband .inner{border-radius:18px}
+  .statement .media{border-radius:14px}
 </style>
 </head>
 <body>
@@ -299,6 +325,7 @@
       </a>
       <ul class="nav-links" id="navLinks">
         <li><a href="#platform">Energy Platform</a></li>
+        <li><a href="#data-centers">Data Centers</a></li>
         <li><a href="#battery">Storage</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#farm">Vertical Farm</a></li>
@@ -388,6 +415,43 @@
   </div>
 </section>
 
+<!-- DATA CENTERS -->
+<section class="datacenter" id="data-centers">
+  <div class="wrap">
+    <div class="dc-head">
+      <div class="eyebrow">Data Centers</div>
+      <h2 class="display">Reliable, Zero-Emission Power for Data Centers</h2>
+      <p>Purpose-built power generation for hyperscale, colocation, and edge data centers — deploy in months, with no fuel costs and full redundancy. AI and cloud workloads demand continuous, high-density baseload power. Venturi delivers it.</p>
+    </div>
+    <div class="dc-grid">
+      <div class="dc-card">
+        <div class="num">6–12 mo</div>
+        <h3>Deploy in Months, Not Years</h3>
+        <p>Skip multi-year grid interconnection queues and bring capacity online fast.</p>
+      </div>
+      <div class="dc-card">
+        <div class="num">100–500 MW</div>
+        <h3>Firm, Dispatchable Power</h3>
+        <p>Continuous baseload output engineered for uptime-critical compute.</p>
+      </div>
+      <div class="dc-card">
+        <div class="num">N+1 / 2N</div>
+        <h3>Full Redundancy</h3>
+        <p>Redundant configurations with 24/7 SCADA monitoring built in.</p>
+      </div>
+      <div class="dc-card">
+        <div class="num">$0 fuel</div>
+        <h3>Zero Fuel Costs</h3>
+        <p>Predictable economics, immune to gas, diesel, and grid price volatility.</p>
+      </div>
+    </div>
+    <div class="dc-foot">
+      <p class="use">Built for hyperscale and AI training campuses, colocation and wholesale data centers, edge compute, and GPU/HPC clusters with high power density.</p>
+      <a href="#contact" class="btn solid">Talk to Our Team</a>
+    </div>
+  </div>
+</section>
+
 <!-- STATEMENT (light) -->
 <section class="statement" id="about">
   <div class="wrap">
@@ -412,9 +476,9 @@
     <div class="duo-grid">
       <a class="card" href="#battery">
         <div class="thumb">
-          <img src="assets/venturi/battery-container.png" alt="Venturi Cyber Battery containerized storage" />
+          <img src="assets/venturi/megawatt-platform.png" alt="Venturi Cyber Battery storage system" />
         </div>
-        <h3>Containerized Storage</h3>
+        <h3>Battery Storage</h3>
         <span class="arrow-link">Explore Cyber Battery
           <svg viewBox="0 0 26 12" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M0 6h24M19 1l5 5-5 5"/></svg>
         </span>
@@ -507,6 +571,7 @@
           <li><a href="#platform">Venturi Omega</a></li>
           <li><a href="#platform">Megawatt Platform</a></li>
           <li><a href="#battery">Cyber Battery Storage</a></li>
+          <li><a href="#data-centers">Data Center Power</a></li>
           <li><a href="#about">Assembly &amp; Testing</a></li>
         </ul>
       </div>
