@@ -19,9 +19,10 @@
     --muted-dark:#5b5e64;
     --line:rgba(255,255,255,.16);
     --line-dark:rgba(0,0,0,.14);
-    --tan:#cdbd97;
-    --tan-strong:#bfa876;
-    --banner:#d8c9ab;
+    --teal:#1c93a8;
+    --teal-strong:#15788a;
+    --teal-light:#4bbccf;
+    --banner:#c7e7ec;
     --serif:"Playfair Display",Georgia,serif;
     --sans:"Inter",system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
     --wrap:1440px;
@@ -81,10 +82,10 @@
   .nav-links a:hover{opacity:.65}
   .nav-right{display:flex;align-items:center;gap:22px}
   .nav-cta{
-    background:var(--tan);color:#1c1913;font-size:12px;letter-spacing:.12em;text-transform:uppercase;
+    background:var(--teal);color:#fff;font-size:12px;letter-spacing:.12em;text-transform:uppercase;
     font-weight:700;padding:13px 26px;border-radius:2px;transition:.25s;
   }
-  .nav-cta:hover{background:var(--tan-strong)}
+  .nav-cta:hover{background:var(--teal-strong)}
   .icon-btn{width:22px;height:22px;color:#fff;opacity:.9}
   .lang{font-size:13px;font-weight:600;display:flex;align-items:center;gap:7px}
   .burger{display:none;flex-direction:column;gap:5px;background:none;border:0;cursor:pointer;padding:6px}
@@ -177,7 +178,7 @@
   .statement .grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(36px,6vw,90px);align-items:center}
   .statement .media{aspect-ratio:4/3;overflow:hidden;border-radius:4px;background:linear-gradient(160deg,#fff,#e6e8eb);display:flex;align-items:center;justify-content:center;padding:26px}
   .statement .media img{width:100%;height:100%;object-fit:contain;mix-blend-mode:multiply}
-  .statement .eyebrow{color:#93855f;margin-bottom:18px}
+  .statement .eyebrow{color:#2c7d8c;margin-bottom:18px}
   .statement h2{font-family:var(--serif);font-size:clamp(32px,4.4vw,54px);font-weight:400;line-height:1.06;color:#141414;margin-bottom:22px}
   .statement p{color:#4a4c50;font-size:17px;font-weight:300;margin-bottom:16px;max-width:480px}
   .statement .arrow-link{color:#111;margin-top:10px}
@@ -188,7 +189,7 @@
   .farmband .media{aspect-ratio:16/11;overflow:hidden}
   .farmband .media img{width:100%;height:100%;object-fit:cover}
   .farmband .copy{padding:clamp(30px,4vw,56px)}
-  .farmband .eyebrow{margin-bottom:16px;color:var(--tan)}
+  .farmband .eyebrow{margin-bottom:16px;color:var(--teal-light)}
   .farmband h2{font-family:var(--serif);font-size:clamp(28px,3.4vw,42px);font-weight:400;line-height:1.1;margin-bottom:18px}
   .farmband p{color:#b0b4b0;font-weight:300;font-size:16px;margin-bottom:26px;max-width:460px}
 
@@ -215,7 +216,7 @@
   .story .g2{background:linear-gradient(160deg,#182417,#0b0f0a)}
   .story .g3{background:linear-gradient(160deg,#211b12,#0f0c08)}
   .story .thumb .ph{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.4);font-size:11px;letter-spacing:.2em;text-transform:uppercase}
-  .story .date{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--tan);margin:22px 0 12px}
+  .story .date{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--teal-light);margin:22px 0 12px}
   .story h4{font-size:20px;font-weight:400;line-height:1.3;margin-bottom:18px;font-family:var(--serif)}
   .chip{display:inline-block;font-size:11px;letter-spacing:.1em;text-transform:uppercase;border:1px solid var(--line);padding:6px 14px;border-radius:2px;color:#cfcfcf}
 
@@ -228,8 +229,8 @@
   .news label{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#666;display:block;margin-bottom:10px}
   .news .row{display:flex;border:1px solid #c9c6bf;border-radius:4px;overflow:hidden;background:#fff}
   .news input{flex:1;border:0;padding:16px 18px;font-size:15px;font-family:var(--sans);outline:none}
-  .news .row button{background:var(--tan-strong);border:0;color:#fff;padding:0 20px;cursor:pointer;font-size:18px}
-  .news .row button:hover{background:#a8925f}
+  .news .row button{background:var(--teal);border:0;color:#fff;padding:0 20px;cursor:pointer;font-size:18px}
+  .news .row button:hover{background:var(--teal-strong)}
 
   /* ---------- Footer ---------- */
   footer{background:var(--paper);color:#111;padding:clamp(50px,6vw,80px) 0 40px;border-top:1px solid var(--line-dark)}
@@ -326,7 +327,7 @@
   </div>
   <div class="scrim"></div>
   <div class="hero-inner">
-    <h1 class="display">Power, Engineered.</h1>
+    <h1 class="display">Clean Power, Engineered to Scale.</h1>
     <p class="lede">Clean, dispatchable energy at industrial scale — the Venturi Omega motor-generator, Megawatt Platform, and Cyber Battery storage, built and tested in Utah.</p>
     <div class="hero-bottom">
       <div class="hero-stats">
