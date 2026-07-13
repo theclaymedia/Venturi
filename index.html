@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Venturi — We've Built the Future</title>
-<meta name="description" content="Venturi — a deep tech company advancing clean energy and nuclear-powered vertical farming. Home of the Venturi Omega and Megawatt Platform." />
+<title>Venturi — Advanced Clean Energy</title>
+<meta name="description" content="Venturi engineers advanced clean-energy systems — the Venturi Omega motor-generator, Megawatt Platform, and Cyber Battery storage — built and tested in-house in Utah." />
 <link rel="icon" href="assets/venturi/fav.png" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -157,6 +157,42 @@
   .feature h3{font-family:var(--serif);font-size:clamp(30px,3.4vw,46px);font-weight:400;line-height:1.08;margin-bottom:22px}
   .feature p{color:#b7b7b7;font-weight:300;font-size:17px;margin-bottom:30px;max-width:440px}
 
+  /* ---------- Energy platform showcase ---------- */
+  .platform{background:var(--black);padding:clamp(80px,10vw,130px) 0 clamp(50px,6vw,84px)}
+  .platform .head{max-width:660px;margin-bottom:clamp(40px,5vw,62px)}
+  .platform h2{font-family:var(--serif);font-size:clamp(34px,5vw,60px);font-weight:400;line-height:1.05;margin-bottom:20px}
+  .platform .head p{color:#b7b7b7;font-weight:300;font-size:clamp(16px,1.4vw,18px)}
+  .tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(20px,2.5vw,32px)}
+  .tile{display:flex;flex-direction:column;background:#101216;border:1px solid rgba(255,255,255,.08);border-radius:6px;overflow:hidden;transition:border-color .3s,transform .3s}
+  .tile:hover{border-color:rgba(255,255,255,.22);transform:translateY(-4px)}
+  .tile .pic{aspect-ratio:4/3;background:linear-gradient(160deg,#eef0f2,#d7dbdf);display:flex;align-items:center;justify-content:center;padding:22px}
+  .tile .pic img{width:100%;height:100%;object-fit:contain;mix-blend-mode:multiply}
+  .tile .body{padding:26px 26px 30px;display:flex;flex-direction:column;flex:1}
+  .tile .eyebrow{margin-bottom:12px}
+  .tile h3{font-size:22px;font-weight:500;margin-bottom:12px}
+  .tile p{color:#a9adb3;font-weight:300;font-size:14.5px;margin-bottom:22px;flex:1}
+  .tile .arrow-link{color:#fff;font-size:11px}
+
+  /* ---------- Light statement / feature ---------- */
+  .statement{background:var(--paper);color:#111;padding:clamp(80px,10vw,130px) 0}
+  .statement .grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(36px,6vw,90px);align-items:center}
+  .statement .media{aspect-ratio:4/3;overflow:hidden;border-radius:4px;background:linear-gradient(160deg,#fff,#e6e8eb);display:flex;align-items:center;justify-content:center;padding:26px}
+  .statement .media img{width:100%;height:100%;object-fit:contain;mix-blend-mode:multiply}
+  .statement .eyebrow{color:#93855f;margin-bottom:18px}
+  .statement h2{font-family:var(--serif);font-size:clamp(32px,4.4vw,54px);font-weight:400;line-height:1.06;color:#141414;margin-bottom:22px}
+  .statement p{color:#4a4c50;font-size:17px;font-weight:300;margin-bottom:16px;max-width:480px}
+  .statement .arrow-link{color:#111;margin-top:10px}
+
+  /* ---------- Vertical farm (secondary band) ---------- */
+  .farmband{background:var(--black);padding:0 0 clamp(70px,8vw,110px)}
+  .farmband .inner{display:grid;grid-template-columns:1.05fr 1fr;gap:0;background:#0e120e;border:1px solid rgba(255,255,255,.08);border-radius:8px;overflow:hidden}
+  .farmband .media{aspect-ratio:16/11;overflow:hidden}
+  .farmband .media img{width:100%;height:100%;object-fit:cover}
+  .farmband .copy{padding:clamp(30px,4vw,56px)}
+  .farmband .eyebrow{margin-bottom:16px;color:var(--tan)}
+  .farmband h2{font-family:var(--serif);font-size:clamp(28px,3.4vw,42px);font-weight:400;line-height:1.1;margin-bottom:18px}
+  .farmband p{color:#b0b4b0;font-weight:300;font-size:16px;margin-bottom:26px;max-width:460px}
+
   /* ---------- Cards duo ---------- */
   .duo{background:var(--black);padding:0 0 clamp(70px,8vw,110px)}
   .duo-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(24px,3vw,40px)}
@@ -226,6 +262,11 @@
     .desktop-only{display:none}
     .feature{grid-template-columns:1fr}
     .feature .media{order:-1;aspect-ratio:4/3}
+    .tiles{grid-template-columns:1fr}
+    .statement .grid{grid-template-columns:1fr;gap:30px}
+    .statement .media{order:-1;aspect-ratio:16/10}
+    .farmband .inner{grid-template-columns:1fr}
+    .farmband .media{order:-1}
     .duo-grid{grid-template-columns:1fr}
     .story-grid{grid-template-columns:1fr;gap:44px}
     .news-grid{grid-template-columns:1fr;gap:28px}
@@ -245,8 +286,8 @@
 
 <!-- Promo banner -->
 <div class="promo">
-  Introducing the Venturi Omega &amp; Megawatt Platform — clean power at industrial scale.
-  <a href="#energy">Learn More</a>
+  The Venturi Megawatt Platform — clean, dispatchable power at industrial scale.
+  <a href="#platform">Explore the Platform</a>
 </div>
 
 <!-- Header -->
@@ -257,10 +298,10 @@
         <span class="logo-chip"><img src="assets/venturi/Venturilog_head.png" alt="Venturi" /></span>
       </a>
       <ul class="nav-links" id="navLinks">
-        <li><a href="#energy">Energy</a></li>
-        <li><a href="#farm">Vertical Farm</a></li>
+        <li><a href="#platform">Energy Platform</a></li>
+        <li><a href="#battery">Storage</a></li>
         <li><a href="#about">About</a></li>
-        <li><a href="#stories">Stories</a></li>
+        <li><a href="#farm">Vertical Farm</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
       <div class="nav-right">
@@ -277,7 +318,7 @@
 
 <a id="top"></a>
 
-<!-- HERO 1 — Energy / Venturi Omega -->
+<!-- HERO — Energy (video banner) -->
 <section class="hero" id="energy">
   <div class="hero-bg">
     <video autoplay muted loop playsinline preload="auto" poster="assets/venturi/energy-hero-poster.jpg">
@@ -286,65 +327,78 @@
   </div>
   <div class="scrim"></div>
   <div class="hero-inner">
-    <h1 class="display">Venturi Omega</h1>
-    <p class="lede">Advanced energy, reimagined. A new generation of clean power built for the megawatt era — engineered from the ground up in Utah.</p>
+    <h1 class="display">Power, Engineered.</h1>
+    <p class="lede">Clean, dispatchable energy at industrial scale — the Venturi Omega motor-generator, Megawatt Platform, and Cyber Battery storage, built and tested in Utah.</p>
     <div class="hero-bottom">
       <div class="hero-stats">
-        <div class="stat"><div class="k">Platform</div><div class="v">Megawatt</div><div class="sub">Grid-scale clean power</div></div>
-        <div class="stat"><div class="k">In-House</div><div class="v">Motor &amp; Generator</div><div class="sub">Assembly &amp; testing</div></div>
-        <div class="stat"><div class="k">Based At</div><div class="v">Utah Tech</div><div class="sub">St. George, Utah</div></div>
+        <div class="stat"><div class="k">Platform</div><div class="v">Megawatt-Scale</div><div class="sub">Grid-ready clean power</div></div>
+        <div class="stat"><div class="k">Storage</div><div class="v">Cyber Battery</div><div class="sub">Modular &amp; containerized</div></div>
+        <div class="stat"><div class="k">Engineered At</div><div class="v">Utah Tech</div><div class="sub">St. George, Utah</div></div>
       </div>
       <div class="hero-actions">
-        <a href="#about" class="btn">Explore Energy</a>
-        <a href="#farm" class="btn solid">See Vertical Farm</a>
+        <a href="#platform" class="btn">Explore the Platform</a>
+        <a href="#contact" class="btn solid">Get in Touch</a>
       </div>
     </div>
   </div>
 </section>
 
-<!-- HERO 2 — Vertical Farm (real Venturi image) -->
-<section class="hero" id="farm">
-  <div class="hero-bg">
-    <video autoplay muted loop playsinline preload="auto" poster="assets/venturi/farm-hero-poster.jpg">
-      <source src="assets/venturi/farm-hero.mp4" type="video/mp4" />
-    </video>
-  </div>
-  <div class="scrim"></div>
-  <div class="hero-inner">
-    <h1 class="display">Vertical Farm</h1>
-    <p class="lede">Nuclear-powered, fully automated growing — from seed to harvest. Relentless yield. Minimal footprint. Food security, reengineered.</p>
-    <div class="hero-bottom">
-      <div class="hero-stats">
-        <div class="stat"><div class="k">Powered By</div><div class="v">Nuclear Energy</div><div class="sub">Clean, continuous baseload</div></div>
-        <div class="stat"><div class="k">Automation</div><div class="v">Seed → Harvest</div><div class="sub">Robotic, end-to-end</div></div>
-        <div class="stat"><div class="k">Footprint</div><div class="v">Vertical</div><div class="sub">More crop, less land</div></div>
-      </div>
-      <div class="hero-actions">
-        <a href="#about" class="btn">Learn More</a>
-        <a href="#contact" class="btn solid">Partner With Us</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- A NEW STANDARD -->
-<section class="standard" id="about">
+<!-- ENERGY PLATFORM SHOWCASE -->
+<section class="platform" id="platform">
   <div class="wrap">
-    <h2 class="display">A New Standard of Deep Tech</h2>
-    <p class="sub">Engineered in Utah. Built for the world. Two frontiers, one mission — a cleaner, more resilient future.</p>
-    <div class="tabs" role="tablist">
-      <button class="tab active" data-tab="0">About Us</button>
-      <button class="tab" data-tab="1">Energy</button>
-      <button class="tab" data-tab="2">Vertical Farm</button>
-      <button class="tab" data-tab="3">Testing</button>
+    <div class="head">
+      <h2 class="display">The Venturi Energy Platform</h2>
+      <p>A complete, in-house energy system — from rotating machines to grid-scale storage. Engineered, assembled, and tested under one roof.</p>
     </div>
+    <div class="tiles">
+      <article class="tile">
+        <div class="pic"><img src="assets/venturi/motor-generator.png" alt="Venturi Omega motor-generator" /></div>
+        <div class="body">
+          <div class="eyebrow">Motor-Generator</div>
+          <h3>Venturi Omega</h3>
+          <p>Our flagship motor-generator — assembled and tested in-house for reliable, clean power generation.</p>
+          <a href="#contact" class="arrow-link">Learn More
+            <svg viewBox="0 0 26 12" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M0 6h24M19 1l5 5-5 5"/></svg>
+          </a>
+        </div>
+      </article>
+      <article class="tile">
+        <div class="pic"><img src="assets/venturi/megawatt-platform.png" alt="Venturi Megawatt Platform" /></div>
+        <div class="body">
+          <div class="eyebrow">Grid-Scale Power</div>
+          <h3>Megawatt Platform</h3>
+          <p>Dispatchable, megawatt-scale clean energy engineered for industrial and utility demand.</p>
+          <a href="#contact" class="arrow-link">Learn More
+            <svg viewBox="0 0 26 12" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M0 6h24M19 1l5 5-5 5"/></svg>
+          </a>
+        </div>
+      </article>
+      <article class="tile" id="battery">
+        <div class="pic"><img src="assets/venturi/cyber-battery.png" alt="Venturi Cyber Battery storage" /></div>
+        <div class="body">
+          <div class="eyebrow">Energy Storage</div>
+          <h3>Cyber Battery</h3>
+          <p>Modular, containerized battery storage that keeps clean power available on demand.</p>
+          <a href="#contact" class="arrow-link">Learn More
+            <svg viewBox="0 0 26 12" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M0 6h24M19 1l5 5-5 5"/></svg>
+          </a>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
 
-    <div class="feature">
-      <div class="media"><img id="featureImg" src="assets/venturi/Home-1.png" alt="Venturi technology" /></div>
-      <div class="feature-copy">
-        <h3 id="featureTitle">Technology that drives sustainability.</h3>
-        <p id="featureText">Venturi is a founder-led deep tech company based at Utah Tech University in St. George. We develop advanced clean-energy platforms and next-generation vertical farming — pairing in-house engineering with a relentless focus on efficiency, resilience and scale.</p>
-        <a href="#contact" class="arrow-link">Learn More About Venturi
+<!-- STATEMENT (light) -->
+<section class="statement" id="about">
+  <div class="wrap">
+    <div class="grid">
+      <div class="media"><img src="assets/venturi/motor-cad.png" alt="Venturi motor-generator engineering" /></div>
+      <div class="copy">
+        <div class="eyebrow">Why Venturi</div>
+        <h2>Engineered in Utah.<br/>Built to scale.</h2>
+        <p>Venturi designs and builds advanced energy systems end to end — rotating machines, power electronics, and storage — validated in-house before they ever ship.</p>
+        <p>The result is clean, dependable power that partners can trust, without the complexity.</p>
+        <a href="#contact" class="arrow-link">About Venturi
           <svg viewBox="0 0 26 12" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M0 6h24M19 1l5 5-5 5"/></svg>
         </a>
       </div>
@@ -356,12 +410,12 @@
 <section class="duo">
   <div class="wrap">
     <div class="duo-grid">
-      <a class="card" href="#energy">
+      <a class="card" href="#battery">
         <div class="thumb">
-          <img src="assets/venturi/megawatt-platform.png" alt="Venturi Megawatt Platform battery system" />
+          <img src="assets/venturi/battery-container.png" alt="Venturi Cyber Battery containerized storage" />
         </div>
-        <h3>Megawatt Platform</h3>
-        <span class="arrow-link">Explore the Platform
+        <h3>Containerized Storage</h3>
+        <span class="arrow-link">Explore Cyber Battery
           <svg viewBox="0 0 26 12" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M0 6h24M19 1l5 5-5 5"/></svg>
         </span>
       </a>
@@ -370,10 +424,27 @@
           <img src="assets/venturi/utah-tech.jpg" alt="Utah Tech University campus, St. George, Utah" />
         </div>
         <h3>Our Location</h3>
-        <span class="arrow-link">Explore Locations
+        <span class="arrow-link">Utah Tech University
           <svg viewBox="0 0 26 12" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M0 6h24M19 1l5 5-5 5"/></svg>
         </span>
       </a>
+    </div>
+  </div>
+</section>
+
+<!-- VERTICAL FARM — secondary initiative -->
+<section class="farmband" id="farm">
+  <div class="wrap">
+    <div class="inner">
+      <div class="media"><img src="assets/venturi/vertical-farm.png" alt="Venturi vertical farming facility" /></div>
+      <div class="copy">
+        <div class="eyebrow">Also from Venturi</div>
+        <h2>Vertical Farming</h2>
+        <p>Beyond energy, we're developing nuclear-powered, robotically automated vertical farming — a longer-horizon initiative applying the same engineering discipline to food security.</p>
+        <a href="#contact" class="arrow-link">Learn More
+          <svg viewBox="0 0 26 12" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M0 6h24M19 1l5 5-5 5"/></svg>
+        </a>
+      </div>
     </div>
   </div>
 </section>
@@ -395,10 +466,10 @@
         <span class="chip">Energy</span>
       </article>
       <article class="story">
-        <div class="thumb"><img src="assets/venturi/vertical-farm.png" alt="Venturi vertical farm growing facility" /></div>
+        <div class="thumb"><img src="assets/venturi/megawatt-platform.png" alt="Venturi Megawatt Platform storage" /></div>
         <div class="date">June 11, 2026</div>
-        <h4>From Seed to Harvest: Robotic Automation in the Vertical Farm</h4>
-        <span class="chip">Agriculture</span>
+        <h4>Cyber Battery: Containerized Storage for Clean Power</h4>
+        <span class="chip">Energy</span>
       </article>
       <article class="story">
         <div class="thumb"><img src="assets/venturi/utah-tech.jpg" alt="Utah Tech University campus" /></div>
@@ -431,30 +502,30 @@
   <div class="wrap">
     <div class="foot-grid">
       <div class="foot-col">
-        <h5>Energy</h5>
+        <h5>Energy Platform</h5>
         <ul>
-          <li><a href="#energy">Venturi Omega</a></li>
-          <li><a href="#energy">Megawatt Platform</a></li>
-          <li><a href="#energy">Motor Generator Assembly</a></li>
-          <li><a href="#energy">Assembly &amp; Testing</a></li>
-        </ul>
-      </div>
-      <div class="foot-col">
-        <h5>Vertical Farm</h5>
-        <ul>
-          <li><a href="#farm">Nuclear Farming</a></li>
-          <li><a href="#farm">Advantages</a></li>
-          <li><a href="#farm">Robotic Automation</a></li>
-          <li><a href="#farm">Seed to Harvest</a></li>
+          <li><a href="#platform">Venturi Omega</a></li>
+          <li><a href="#platform">Megawatt Platform</a></li>
+          <li><a href="#battery">Cyber Battery Storage</a></li>
+          <li><a href="#about">Assembly &amp; Testing</a></li>
         </ul>
       </div>
       <div class="foot-col">
         <h5>Company</h5>
         <ul>
-          <li><a href="#about">About Us</a></li>
+          <li><a href="#about">About Venturi</a></li>
           <li><a href="#about">Leadership</a></li>
           <li><a href="#stories">Stories</a></li>
           <li><a href="#contact">Careers</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h5>Vertical Farm</h5>
+        <ul>
+          <li><a href="#farm">Overview</a></li>
+          <li><a href="#farm">Nuclear Farming</a></li>
+          <li><a href="#farm">Robotic Automation</a></li>
+          <li><a href="#farm">Seed to Harvest</a></li>
         </ul>
       </div>
       <div class="foot-col">
@@ -504,35 +575,6 @@
   const navLinks = document.getElementById('navLinks');
   burger.addEventListener('click', () => navLinks.classList.toggle('open'));
   navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
-
-  // Tabs in "A New Standard"
-  const panels = [
-    {
-      title:'Technology that drives sustainability.',
-      text:'Venturi is a founder-led deep tech company based at Utah Tech University in St. George. We develop advanced clean-energy platforms and next-generation vertical farming — pairing in-house engineering with a relentless focus on efficiency, resilience and scale.'
-    },
-    {
-      title:'Power built for the megawatt era.',
-      text:'The Venturi Omega and Megawatt Platform deliver clean, grid-scale energy. From motor and generator assembly to full-system testing, every stage is engineered and validated in-house for reliability at industrial scale.'
-    },
-    {
-      title:'Nuclear farming, fully automated.',
-      text:'Our vertical farm pairs continuous nuclear baseload power with robotic automation from seed to harvest — producing more food on less land, year-round, with a fraction of the water and footprint of conventional agriculture.'
-    },
-    {
-      title:'Validated in-house, end to end.',
-      text:'Motor generator assembly and rigorous testing let us prove performance before deployment. Nothing ships until it has earned it — the foundation of every Venturi platform.'
-    }
-  ];
-  const tabs = document.querySelectorAll('.tab');
-  const fT = document.getElementById('featureTitle');
-  const fX = document.getElementById('featureText');
-  tabs.forEach(t => t.addEventListener('click', () => {
-    tabs.forEach(x => x.classList.remove('active'));
-    t.classList.add('active');
-    const p = panels[+t.dataset.tab];
-    fT.textContent = p.title; fX.textContent = p.text;
-  }));
 </script>
 </body>
 </html>
